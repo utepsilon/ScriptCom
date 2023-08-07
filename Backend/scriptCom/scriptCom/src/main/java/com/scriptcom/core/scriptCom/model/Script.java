@@ -1,5 +1,6 @@
 package com.scriptcom.core.scriptCom.model;
 
+import org.bson.types.Binary;
 import org.springframework.data.annotation.Id;
 
 public class Script {
@@ -16,6 +17,15 @@ public class Script {
     private String code;
 
     private String fileName;
+
+    public Script(String id, String title, String description, Double reviews, String code, String fileName) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.reviews = reviews;
+        this.code = code;
+        this.fileName = fileName;
+    }
 
     public String getId() {
         return id;

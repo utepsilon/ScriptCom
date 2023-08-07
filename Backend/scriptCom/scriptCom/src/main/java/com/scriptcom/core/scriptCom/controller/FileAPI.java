@@ -16,8 +16,6 @@ public class FileAPI {
     @Autowired
     FileService fileService;
 
-    @Autowired
-    ObjectMapper objectMapper;
 
     @PostMapping("/file/upload")
     public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) throws IOException{

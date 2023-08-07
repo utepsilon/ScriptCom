@@ -20,7 +20,7 @@ public class ScriptAPI {
 
 
     @GetMapping("/script/{id}")
-    public ResponseEntity<Object> getScript(@PathVariable String id){
+    public ResponseEntity<?> getScript(@PathVariable String id){
 
         Optional<Mono<Script>>  scriptMono = scriptService.getScript(id);
 
@@ -33,7 +33,7 @@ public class ScriptAPI {
     }
 
     @PostMapping("/script")
-    public ResponseEntity<Object> saveScript(@RequestBody Script script){
+    public ResponseEntity<?> saveScript(@RequestBody Script script){
 
          Optional<Mono<Script>> scriptMono =  scriptService.addScript(script);
 
