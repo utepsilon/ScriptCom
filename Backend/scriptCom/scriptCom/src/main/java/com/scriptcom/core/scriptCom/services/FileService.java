@@ -9,11 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.gridfs.GridFsOperations;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import org.springframework.data.mongodb.core.query.Query;
 import java.io.IOException;
 
+@Service
 public class FileService {
 
     @Autowired
@@ -26,7 +28,8 @@ public class FileService {
 
         DBObject metadata = new BasicDBObject();
         metadata.put("fileSize", upload.getSize());
-        Object fileId = gridFsTemplate.store(upload.getInputStream(),
+        Object fileId = gridFsTemplate.store(
+                upload.getInputStream(),
                 upload.getOriginalFilename(),
                 upload.getContentType(),
                 metadata);
