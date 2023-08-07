@@ -18,13 +18,24 @@ public class Script {
 
     private String fileName;
 
-    public Script(String id, String title, String description, Double reviews, String code, String fileName) {
+    private String thumbnailId;
+
+    public Script(String id, String title, String description, Double reviews, String code, String fileName, String thumbnailId) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.reviews = reviews;
         this.code = code;
         this.fileName = fileName;
+        this.thumbnailId = thumbnailId;
+    }
+
+    public String getThumbnailId() {
+        return thumbnailId;
+    }
+
+    public void setThumbnailId(String thumbnailId) {
+        this.thumbnailId = thumbnailId;
     }
 
     public String getId() {

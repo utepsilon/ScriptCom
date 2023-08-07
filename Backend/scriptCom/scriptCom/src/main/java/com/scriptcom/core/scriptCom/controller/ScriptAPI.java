@@ -38,7 +38,7 @@ public class ScriptAPI {
          Optional<Mono<Script>> scriptMono =  scriptService.addScript(script);
 
          if(scriptMono.isPresent()){
-            return new ResponseEntity<>(scriptMono.get(), HttpStatus.CREATED);
+            return new ResponseEntity<>(scriptMono.get().block(), HttpStatus.CREATED);
          }
          else{
              return  new ResponseEntity<>("Unable to Save Object",HttpStatus.BAD_REQUEST);
