@@ -14,6 +14,7 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
 @RestController
+@CrossOrigin(value = "*")
 public class ScriptAPI {
 
     @Autowired
