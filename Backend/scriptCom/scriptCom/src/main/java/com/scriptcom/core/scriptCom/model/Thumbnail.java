@@ -27,7 +27,7 @@ public class Thumbnail {
         this.title = title;
     }
 
-    public Binary getImage() {
+        public Binary getImage() {
         return image;
     }
 

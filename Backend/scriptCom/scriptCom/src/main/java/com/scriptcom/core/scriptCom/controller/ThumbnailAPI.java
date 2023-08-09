@@ -17,7 +17,7 @@ public class ThumbnailAPI {
     ThumbnailService thumbnailService;
 
     @GetMapping("/thumbnail/{id}")
-    public ResponseEntity<?> getThumbnailData(String id){
+    public ResponseEntity<?> getThumbnailData(@PathVariable  String id){
         return new ResponseEntity<>(thumbnailService.getThumbnail(id), HttpStatus.OK);
     }
 
