@@ -14,14 +14,13 @@ const Card = styled.div`
   border-bottom-right-radius: 50px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   margin-top: 5rem;
-  background: snow;
+  background-image: linear-gradient(#F89E9E,snow);
   margin: 1rem;
   overflow: hidden;
   transition: all 0.6s ease;
 
   .box-card:hover {
-    box-shadow: rgba(100, 172, 28, 0.199) -10px 10px,
-      rgba(255, 172, 28, 0.19) -20px 20px;
+    box-shadow: rgba(100, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px;
   }
 
   .title {
@@ -66,7 +65,7 @@ const CategoryItem = ({ category, index }) => {
     <>
       <Card className="box-card">
         <h2 className="title"> {title}</h2>
-        <CategoryImage thumbnail={thumbnailId} alt="Image"></CategoryImage>
+        <CategoryImage thumbnail={thumbnailId} index={index} category= {category} alt="Image"></CategoryImage>
         <p className="description"> {description}</p>
         <p className="review"> {reviews}</p>
         <button onClick={routeChange} className="btn">

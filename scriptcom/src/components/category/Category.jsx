@@ -17,15 +17,22 @@ border-top-left-radius:50px;
 border-bottom-left-radius:50px;
 border-top-right-radius:50px;
 border-bottom-right-radius:50px;
-box-shadow: 5px 10px #D3D5D3;
-background:#ff4760;
+background: white;
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 `;
 
 export const CategoryContext = createContext();
 
 const Category = () => {
-  const [categoryData, setCategoryData] = useState([]);
+  const [categoryData, setCategoryData] = useState([{"id": "id6",
+  "title": "Title5",
+  "description": "description5",
+  "reviews": 4.0,
+  "code": "Code",
+  "fileName": "amazon_deals.py",
+  "thumbnailId": "64d3db4bb2a6443742af3fff",
+   "imageData":""}]);
 
   const fetchCategoryData = async () => {
     const { data } = await axios.get("http://localhost:8083/script/all");
@@ -41,7 +48,7 @@ const Category = () => {
 
   return (
     <>
-      <CategoryContext.Provider value={{ categoryData, fetchCategoryData }}>
+      <CategoryContext.Provider value={{ categoryData, fetchCategoryData ,setCategoryData}}>
         <CategoryBox className="box category-box">
           {categoryData.map((category, index) => {
             return (
