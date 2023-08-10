@@ -19,7 +19,7 @@ public class FileAPI {
 
 
     @PostMapping("/file/upload")
-    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) throws IOException{
+        public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) throws IOException{
         Object response  = fileService.addFile(file);
         return new ResponseEntity<>(response,HttpStatus.OK);
     }

@@ -14,7 +14,7 @@ const Card = styled.div`
   border-bottom-right-radius: 50px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   margin-top: 5rem;
-  background-image: linear-gradient(#F89E9E,snow);
+  background-image: linear-gradient(#4C94FD ,snow);
   margin: 1rem;
   overflow: hidden;
   transition: all 0.6s ease;

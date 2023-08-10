@@ -5,7 +5,7 @@ import styled from "styled-components";
 const CategoryBox = styled.div`
 
 height: auto;
-width: 50rem;
+width: 50%;
 position:relative;
 left:23%;
 top:3rem;
